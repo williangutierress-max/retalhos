@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pv-primary: #3A1B09;
+    --pv-accent: #FF8F00;
+    --pv-bg: #FCE4EC;
+    --pv-text: #D81B60;
+    --pv-text-muted: #4A423D;
+    --pv-cream: #FCE9D8;
+    --pv-cream-soft: #F8DCC2;
+    --pv-tan: #EBDDCB;
+    --pv-pink: #FCE4EC;
+    --pv-mint: #EFFBF2;
+    --pv-mint-border: #BFE7CF;
+    --pv-blue-bg: #EFF8FB;
+    --pv-success: #39B574;
+    --pv-gold: #E7B66F;
+    --pv-danger: #FF3B3B;
+    --pv-radius: 18px;
+    --pv-container: 1200px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    color: var(--pv-text);
+    background-color: var(--pv-bg);
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: "Archivo Black", "Inter", system-ui, -apple-system, sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pv-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.pv-pulse {
+  animation: pv-pulse 2s ease-in-out infinite;
+}
